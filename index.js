@@ -21,7 +21,7 @@ app.get('/', function(request, response) {
     if (filePath == '/')
         filePath = '/resume.html';
 
-    filePath = __dirname + '/public/resume' + filePath;
+    filePath = __dirname + '/public/not resume' + filePath;
 
     console.log(filePath);
 
