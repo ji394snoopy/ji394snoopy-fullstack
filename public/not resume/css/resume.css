@@ -315,7 +315,7 @@ h2+.sub {
 
 .menu .item {
     background: inherit;
-    padding: 1.2em 1.5em;
+    padding: 1.2em 1.2em;
     display: inline-block;
 }
 
@@ -474,6 +474,7 @@ h2+.sub {
     .rows .responsive.cell.three,
     .rows .responsive.cell.four,
     .rows .responsive.cell.five {
+        -webkit-flex: 1 auto;
         flex: 1 auto;
     }
 }
