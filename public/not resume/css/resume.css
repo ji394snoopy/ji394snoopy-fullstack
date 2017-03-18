@@ -586,12 +586,19 @@ h2+.sub {
 
 @media screen and (max-width: 768px) {
     .Nav {
-        display: none;
+        visibility: hidden;
         position: fixed;
         top: 1em;
         right: 1em;
         margin: 0;
         z-index: 20;
+        transition: .5s;
+        -webkit-transition: .5s;
+        opacity: 0;
+    }
+    .Nav.active{
+        visibility: visible;
+        opacity: 1;
     }
 }
 

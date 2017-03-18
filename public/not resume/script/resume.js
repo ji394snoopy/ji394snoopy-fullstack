@@ -17,6 +17,7 @@ $(document).ready(function() {
     var vResume = new Vue({
         el: "#resume",
         data: {
+            isMobile: false,
             circlePercentageColor: "#31b0d5",
             menu: ["ABOUT", "INTRODUCTION", "SKILLS", "EXPERIENCE", "EDUCATION"],
             aboutme: {
@@ -106,6 +107,7 @@ $(document).ready(function() {
             }
         },
         mounted: function() {
+            this.isMobile = document.clientWidth <= 768;
             var skills = this.skills;
             var animate = function(percent, index) {
                 var counter = skills[index].count;

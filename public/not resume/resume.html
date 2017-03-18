@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <title>Jyuan Resume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="Jyuan Huang">
+    <meta name="description" content="一份簡單的履歷">
+    <meta name="keywords" content="Jyuan,黃卷,卷,履歷,黃俊諺">
 </head>
 <!-- Jquery -->
 <script src="/not resume/script/jquery.min.js"></script>
@@ -26,7 +30,7 @@
                 <div class="line"></div>
                 <div class="line"></div>
             </a>
-            <nav class="Nav">
+            <nav class="Nav" v-bind:class="{active: menuIsActive}" v-on:click="menuIsActive = !menuIsActive">
                 <div class="ui darkblue menu">
                     <div class="rows justify">
                         <a class="item" href="#aboutme">ABOUT</a>
