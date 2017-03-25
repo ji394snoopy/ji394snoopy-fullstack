@@ -20,6 +20,7 @@
 <!-- <div class="cell one circle images medium vertical-center">
     <img src="./img/head_photo.jpg" alt="Jyuan Head Photo">
 </div> -->
+
 <body class="Body">
     <header class="ui fluid container gray Header" id="banner">
         <div class="ui container very padded">
@@ -34,7 +35,7 @@
                 <div class="ui darkblue menu">
                     <div class="rows justify">
                         <a class="item" href="#aboutme">ABOUT</a>
-                        <a class="item" href="#introduction">INTRODUCTION</a>
+                        <a class="item" href="#awards">AWARDS</a>
                         <a class="item" href="#skills">SKILLS</a>
                         <a class="item" href="#experience">EXPERIENCE</a>
                         <a class="item" href="#education">EDUCATION</a></div>
@@ -55,6 +56,20 @@
                                     <div class="title cell one word darkblue">Name</div>
                                     <div class="content cell two">
                                         <a>{{aboutme.name}}</a>
+                                    </div>
+                                </div>
+                                <div class="item rows">
+                                    <i class="icon male"></i>
+                                    <div class="title cell one word darkblue">Education</div>
+                                    <div class="content cell two">
+                                        <a>{{aboutme.school}}</a>
+                                    </div>
+                                </div>
+                                <div class="item rows">
+                                    <i class="icon male"></i>
+                                    <div class="title cell one word darkblue">Department</div>
+                                    <div class="content cell two">
+                                        <a>{{aboutme.department}}</a>
                                     </div>
                                 </div>
                                 <div class="item rows">
@@ -96,10 +111,18 @@
                         </div>
                     </div>
                     <div class="responsive segment hasRibbon cell three">
-                        <a class="ui darkblue ribbon header reverse" id="introduction">INTRODUCTION</a>
+                        <a class="ui darkblue reverse ribbon header" id="awards">AWARDS</a>
                         <div class="segment-wrapper">
                             <div class="textContent">
-                                <p v-for="intro in introduction">{{intro}}</p>
+                                <div class="header large word darkblue">iBusker--具人文內涵的城市旅遊App</div>
+                                <ul>獲得獎項:
+                                    <li>103學年度第十屆中興大學資訊管理實務專題成果展 B組第二名</li>
+                                    <li>2015精誠盃APP創意競賽 佳作</li>
+                                    <li>2015軟體創作達人暑期成長營 優勝團隊</li>
+                                    <li>2015Open Data創新應用競賽開放資料應用組銀獎</li>
+                                    <li>2015第20屆全國大專校院資訊應用服務創新競賽: 資訊技術應用組(一) 第一名</li>
+                                    <li>2015第20屆全國大專校院資訊應用服務創新競賽: 臺北生活好友善創新應用組 第三名</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -175,14 +198,6 @@
                                         </ul>
                                     </p>
                                     <p>大三專題三人團隊，以街頭藝人為出發點開發行動App--iBusker。以Html5、Css、JavaScript為基礎並由PhoneGap把網頁包裝成行動App，後端以雲端SAAS平台Parse.com(已關閉)和Heroku建立，並結合Beacon和定位技術發送通知給使用者。 此構想獲得教授們的青睞，也參加許多比賽獲得佳績。
-                                        <ul>獲得獎項:
-                                            <li>103學年度第十屆中興大學資訊管理實務專題成果展 B組第二名</li>
-                                            <li>2015精誠盃APP創意競賽 佳作</li>
-                                            <li>2015軟體創作達人暑期成長營 優勝團隊</li>
-                                            <li>2015Open Data創新應用競賽開放資料應用組銀獎</li>
-                                            <li>2015第20屆全國大專校院資訊應用服務創新競賽: 資訊技術應用組(一) 第一名</li>
-                                            <li>2015第20屆全國大專校院資訊應用服務創新競賽: 臺北生活好友善創新應用組 第三名</li>
-                                        </ul>
                                     </p>
                                     <p>
                                         <ul>其他事蹟:
@@ -192,6 +207,17 @@
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="Introduction ui darkblue">
+                <div class="segment hasRibbon">
+                    <a class="ui lightblue ribbon header" id="introduction">INTRODUCTION</a>
+                    <div class="segment-wrapper">
+                        <div class="textContent">
+                            <p>我喜愛研究前端的技術，更喜歡JavaScript語言，有空閑時間會寫些小東西滿足自己，且以能夠專精js橫跨前後端為目標，除了前端技術也有在撰寫Swift(Ios)和Java(Android)。</p>
+                            <p>嚮往在輕鬆愉快的工作環境和同事主管們互相切磋進步，雖然目前還沒有特別有興趣的領域，但希望能在這段時間先把技術磨練好以備未來遇見機會能好好把握。以我所會的這些技術為工具，希望實作些軟體平台能夠改變台灣的環境往好的方向走。</p>
                         </div>
                     </div>
                 </div>
