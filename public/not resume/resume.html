@@ -11,12 +11,12 @@
     <meta name="keywords" content="Jyuan,黃卷,卷,履歷,黃俊諺">
 </head>
 <!-- Jquery -->
-<script src="/not resume/script/jquery.min.js"></script>
-<script src="/not resume/script/vue.js"></script>
+<script src="./not resume/script/jquery.min.js"></script>
+<script src="./not resume/script/vue.js"></script>
 <!-- Main -->
-<script src="/not resume/script/resume.js"></script>
-<link rel="stylesheet" href="/not resume/css/resume.css">
-<link rel="stylesheet" href="/not resume/css/reset.css">
+<script src="./not resume/script/resume.js"></script>
+<link rel="stylesheet" href="./not resume/css/resume.css">
+<link rel="stylesheet" href="./not resume/css/reset.css">
 <!-- <div class="cell one circle images medium vertical-center">
     <img src="./img/head_photo.jpg" alt="Jyuan Head Photo">
 </div> -->
@@ -24,8 +24,8 @@
 <body class="Body">
     <header class="ui fluid container gray Header" id="banner">
         <div class="ui container very padded">
-            <h1 class="word darkblue">JYUAN HUANG</h1>
-            <div class="word darkblue sub">FRONT END DEVELOPER</div>
+            <h1 class="word-darkblue">JYUAN HUANG</h1>
+            <div class="word-darkblue sub">FRONT END DEVELOPER</div>
             <a class="hamburger ui darkblue horizontal-center" v-bind:class="{active: menuIsActive}" v-on:click="menuIsActive = !menuIsActive">
                 <div class="line"></div>
                 <div class="line"></div>
@@ -53,56 +53,56 @@
                             <div class="list">
                                 <div class="item rows">
                                     <i class="icon male"></i>
-                                    <div class="title cell one word darkblue">Name</div>
+                                    <div class="title cell one word-darkblue">Name</div>
                                     <div class="content cell two">
                                         <a>{{aboutme.name}}</a>
                                     </div>
                                 </div>
                                 <div class="item rows">
                                     <i class="icon male"></i>
-                                    <div class="title cell one word darkblue">Education</div>
+                                    <div class="title cell one word-darkblue">Education</div>
                                     <div class="content cell two">
                                         <a>{{aboutme.school}}</a>
                                     </div>
                                 </div>
                                 <div class="item rows">
                                     <i class="icon male"></i>
-                                    <div class="title cell one word darkblue">Department</div>
+                                    <div class="title cell one word-darkblue">Department</div>
                                     <div class="content cell two">
                                         <a>{{aboutme.department}}</a>
                                     </div>
                                 </div>
                                 <div class="item rows">
                                     <i class="icon facebook"></i>
-                                    <div class="title cell one word darkblue">Facebook</div>
+                                    <div class="title cell one word-darkblue">Facebook</div>
                                     <div class="content cell two">
                                         <a href="https://www.facebook.com/profile.php?id=100000224732119">{{aboutme.facebook}}</a>
                                     </div>
                                 </div>
                                 <div class="item rows">
                                     <i class="icon linkedin"></i>
-                                    <div class="title cell one word darkblue">LinkedIn</div>
+                                    <div class="title cell one word-darkblue">LinkedIn</div>
                                     <div class="content cell two">
                                         <a href="www.linkedin.com/in/jyuan3310">{{aboutme.linkedin}}</a>
                                     </div>
                                 </div>
                                 <div class="item rows">
                                     <i class="icon mail"></i>
-                                    <div class="title cell one word darkblue">Mail</div>
+                                    <div class="title cell one word-darkblue">Mail</div>
                                     <div class="content cell two">
                                         <a href="mailto:eric60513@gmail.com">{{aboutme.mail}}</a>
                                     </div>
                                 </div>
                                 <div class="item rows">
                                     <i class="icon phone"></i>
-                                    <div class="title cell one word darkblue">Phone</div>
+                                    <div class="title cell one word-darkblue">Phone</div>
                                     <div class="content cell two">
                                         <a href="tel:+886975220827">{{aboutme.phone}}</a>
                                     </div>
                                 </div>
                                 <div class="item rows">
                                     <i class="icon birth"></i>
-                                    <div class="title cell one word darkblue">Birth</div>
+                                    <div class="title cell one word-darkblue">Birth</div>
                                     <div class="content cell two">
                                         <a>{{aboutme.birth}}</a>
                                     </div>
@@ -114,7 +114,7 @@
                         <a class="ui darkblue reverse ribbon header" id="awards">AWARDS</a>
                         <div class="segment-wrapper">
                             <div class="textContent">
-                                <div class="header large word darkblue">iBusker--具人文內涵的城市旅遊App</div>
+                                <div class="header large word-darkblue">iBusker--具人文內涵的城市旅遊App</div>
                                 <ul>獲得獎項:
                                     <li>103學年度第十屆中興大學資訊管理實務專題成果展 B組第二名</li>
                                     <li>2015精誠盃APP創意競賽 佳作</li>
@@ -137,16 +137,16 @@
                                 <div class="circle-percentage" v-bind:class="{little : !skill.isBase}">
                                     <div class="bgcircle" v-if="skill.count<180" v-bind:style="{backgroundImage: 'linear-gradient(' + (90 + skill.count) + 'deg, transparent 50%, #d6d6d6 50%),linear-gradient(-90deg, ' + circlePercentageColor + ' 50%, transparent 50%)'}">
                                         <div class="circle">
-                                            <div class="percentage word darkblue">{{skill.percentage}}%</div>
+                                            <div class="percentage word-darkblue">{{skill.percentage}}%</div>
                                         </div>
                                     </div>
                                     <div class="bgcircle" v-else v-bind:style="{backgroundImage: 'linear-gradient(' + (skill.count-90) + 'deg, transparent 50%, '+circlePercentageColor+' 50%),linear-gradient(-90deg, ' + circlePercentageColor + ' 50%, transparent 50%)'}">
                                         <div class="circle">
-                                            <div class="percentage word darkblue">{{skill.percentage}}%</div>
+                                            <div class="percentage word-darkblue">{{skill.percentage}}%</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="textContent word darkblue">{{skill.name}}</div>
+                                <div class="textContent word-darkblue">{{skill.name}}</div>
                             </div>
                         </div>
                     </div>
@@ -169,6 +169,11 @@
                                         <li>工作所運用到的技術 :
                                             <ol>
                                                 <li v-for="tech in exp.tech">{{tech}}</li>
+                                            </ol>
+                                        </li>
+                                        <li v-if="exp.works">作品 :
+                                            <ol>
+                                                <li v-for="work in exp.works">{{work.title}}: <a href="work.href" v-if="work.href">{{work.href}}</a></li>
                                             </ol>
                                         </li>
                                     </ul>
@@ -200,6 +205,9 @@
                                     <p>大三專題三人團隊，以街頭藝人為出發點開發行動App--iBusker。以Html5、Css、JavaScript為基礎並由PhoneGap把網頁包裝成行動App，後端以雲端SAAS平台Parse.com(已關閉)和Heroku建立，並結合Beacon和定位技術發送通知給使用者。 此構想獲得教授們的青睞，也參加許多比賽獲得佳績。
                                     </p>
                                     <p>
+                                        作品： <a class="link" v-on:click="modal.ibusker = !modal.ibusker">iBusker</a>
+                                    </p>
+                                    <p>
                                         <ul>其他事蹟:
                                             <li>擔任2年系學會幹部，並曾擔任系上大型活動總召和多個小活動組長</li>
                                             <li>曾參加咖啡研究社</li>
@@ -223,6 +231,10 @@
                 </div>
             </section>
         </div>
+        <!-- modals -->
+        <modal-wrapper v-bind:is-show="modal.ibusker">
+            <picture-modal v-bind:pictures="ibuskerPics" v-on:close="modal.ibusker=false"></picture-modal>
+        </modal-wrapper>
     </div>
 </body>
 
