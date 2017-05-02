@@ -341,7 +341,7 @@ h2+.sub {
     right: 1.1em;
     width: 2.5em;
     height: 2.5em;
-    border-radius: 1px;
+    border-radius: 5px;
     z-index: 21;
 }
 
@@ -587,7 +587,7 @@ h2+.sub {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     z-index: 100;
 }
 
@@ -597,7 +597,7 @@ h2+.sub {
 
 .modal {
     position: relative;
-    width: 90%;
+    width: 75%;
     height: 80%;
     top: 10%;
     left: 0;
@@ -609,31 +609,66 @@ h2+.sub {
 
 .modal .close {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    vertical-align: middle;
     top: 5%;
     right: 5%;
     display: block;
 }
 
+.modal .close:before,
+.modal .close:after {
+    display: block;
+    content: '';
+    width: 3px;
+    height: 1.5em;
+    background-color: #fff;
+    top: 0;
+    position: absolute;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modal .close:after {
+    transform: rotate(-45deg);
+}
+
+.modal .close:before {
+    transform: rotate(45deg);
+}
+
 .modal .header {
     position: relative;
     max-height: 25%;
+    min-height: 2.1em;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
-.modal .body{
+.modal .body {
     position: relative;
 }
 
 .modal .navbar > * {
     position: absolute;
-    height: 50px;
-    width: 50px;
     display: block;
+}
+
+.modal .navbar .right:before,
+.modal .navbar .left:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    border: 15px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.modal .navbar .left:before {
+    border-right-color: #fff;
+}
+
+.modal .navbar .right:before {
+    border-left-color: #fff;
 }
 
 .modal .navbar .left {
@@ -651,7 +686,7 @@ h2+.sub {
     bottom: 0;
     left: 0;
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 .modal .footer .circle {
@@ -663,7 +698,8 @@ h2+.sub {
     border: 2px solid #fff;
     background-color: transparent;
 }
-.modal .footer .active{
+
+.modal .footer .active {
     background-color: #fff;
 }
 
@@ -688,7 +724,8 @@ h2+.sub {
 
 
 /* else */
-a.link{
+
+a.link {
     color: #fdd76b;
     cursor: pointer;
 }
@@ -754,4 +791,13 @@ a.link{
 
 .Border-front-bottom {
     position: relative;
+}
+
+@media screen and (max-width: 425px) {
+    ol,ul {
+        padding-left: 1.5em;
+    }
+    *{
+        word-wrap: break-word;
+    }
 }
