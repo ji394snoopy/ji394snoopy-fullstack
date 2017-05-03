@@ -92,7 +92,12 @@ $(document).ready(function() {
                 job: "實習生",
                 time: "2015-2015",
                 detail: ["2個月實習經驗", "以Html5+PhoneGap製作產品介紹及客服服務App(未上架)"],
-                tech: ["Html / Css", "JavaScript / Jquery", "PhoneGap"]
+                tech: ["Html / Css", "JavaScript / Jquery", "PhoneGap"],
+                works: [{
+                    title: 'Uaver App',
+                    modal: 'picture',
+                    bind: 'uaver'
+                }]
             }],
             education: {
                 school: "NCHU 國立中興大學",
@@ -116,6 +121,13 @@ $(document).ready(function() {
                 dreamlearn: false,
                 uaver: false
             },
+            uaverPics: [{
+                name: 'Screen Shot 0',
+                href: '/img/uaver_screenshot_0.jpg'
+            }, {
+                name: 'Screen Shot 1',
+                href: '/img/uaver_screenshot_1.jpg'
+            }],
             ibuskerPics: [
                 // {
                 //     name: 'Use Case Diagram',
@@ -316,15 +328,15 @@ Vue.component('picture-modal', {
     <div class="modal">
         <div class="content ui" v-bind:class="{contentColor:hasColor,'white':!hasColor}">
             <div class="header">
-                <a class="close word-white" v-on:click="$emit('close')">X</a>
+                <a class="close word-white" v-on:click="$emit('close')"></a>
             </div>
             <div class="body padded">
                 <div class="img-wrapper" v-for="(picture,index) in pictures" v-if="current===index">
                     <img v-bind:src="fullpath(picture.href)" alt="picture.name">
                 </div>            
                 <div class="navbar">
-                    <a class="right word-white" v-on:click="rightslide"> >> </a>
-                    <a class="left word-white" v-on:click="leftslide"> << </a>
+                    <a class="right word-white" v-on:click="rightslide"></a>
+                    <a class="left word-white" v-on:click="leftslide"></a>
                 </div>
             </div>
             <div class="footer padded">

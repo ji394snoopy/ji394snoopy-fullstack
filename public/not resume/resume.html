@@ -183,7 +183,9 @@
                                         </li>
                                         <li v-if="exp.works">作品 :
                                             <ol>
-                                                <li v-for="work in exp.works">{{work.title}}: <a href="work.href" v-if="work.href" class="link">{{work.href}}</a></li>
+                                                <li v-for="work in exp.works">
+                                                <span v-if="work.href">{{work.title}}: <a href="work.href" class="link">{{work.href}}</a></span>
+                                                <span v-if="work.modal"><a class="link" v-on:click="modal[work.bind] = !modal[work.bind]">{{work.title}}</a></span></li>
                                             </ol>
                                         </li>
                                     </ul>
@@ -233,8 +235,8 @@
                 <div class="segment hasRibbon">
                     <a class="ui lightblue ribbon header" id="introduction">INTRODUCTION</a>
                     <div class="segment-wrapper">
-                        <div class="textContent">
-                            <p>我喜愛研究前端的技術，更喜歡JavaScript語言，有空閑時間會寫些小東西滿足自己，且以能夠專精js橫跨前後端為目標，除了前端技術也有在撰寫Swift(Ios)和Java(Android)。</p>
+                        <div class="textContent">   
+                            <p>我喜愛研究新的技術，更喜歡JavaScript語言，有空閑時間會寫些小東西滿足自己，且以能夠專精js橫跨前後端為目標，除了前端技術也有在撰寫Swift(Ios)和Java(Android)。</p>
                             <p>嚮往在輕鬆愉快的工作環境和同事主管們互相切磋進步，雖然目前還沒有特別有興趣的領域，但希望能在這段時間先把技術磨練好以備未來遇見機會能好好把握。以我所會的這些技術為工具，希望實作些軟體平台能夠改變台灣的環境往好的方向走。</p>
                         </div>
                     </div>
@@ -242,8 +244,9 @@
             </section>
         </div>
         <!-- modals -->
-        <modal-wrapper v-bind:is-show="modal.ibusker">
-            <picture-modal v-bind:pictures="ibuskerPics" v-on:close="modal.ibusker=false"></picture-modal>
+        <modal-wrapper v-bind:is-show="modal.ibusker||modal.uaver">
+            <picture-modal v-if="modal.ibusker" v-bind:pictures="ibuskerPics" v-on:close="modal.ibusker=false"></picture-modal>
+            <picture-modal v-if="modal.uaver" v-bind:pictures="uaverPics" v-on:close="modal.uaver=false"></picture-modal>
         </modal-wrapper>
     </div>
 </body>
