@@ -13,7 +13,7 @@ $(document).ready(function() {
     //     $('.Nav').fadeToggle();
     //     $('.hamburger').toggleClass("active");
     // }
-
+    var asdf = null
     var vResume = new Vue({
         el: "#resume",
         data: {
