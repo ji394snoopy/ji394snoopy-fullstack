@@ -1,2 +1,2 @@
 #Heroku > ji394snoopy-fullstack.com
-  resume
+Resume build version from resume-vue
